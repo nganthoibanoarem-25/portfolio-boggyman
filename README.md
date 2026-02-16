@@ -1,2 +1,2 @@
 # portfolio-boggyman
-Tis is my portfolio 
+This is my portfolio 
