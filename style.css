@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 60px;
+    position:fixed;
+    width:100%;
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,0.3);
+    z-index:1000;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    position:relative;
+}
+
+nav ul li a::after{
+    content:"";
+    width:0;
+    height:2px;
+    background:#00f2fe;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+/* Hero */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    animation: fadeIn 2s ease;
+}
+
+.hero span{
+    color:#00f2fe;
+}
+
+.btn{
+    .hero-content p{
+    margin-top:15px;
+    max-width:500px;
+}
+
+.hero-buttons{
+    margin-top:25px;
+}
+
+.btn.outline{
+    background:transparent;
+    border:2px solid #00f2fe;
+    color:#00f2fe;
+}
+
+.btn.outline:hover{
+    background:#00f2fe;
+    color:black;
+}
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+/* Sections */
+section{
+    padding:100px 60px;
+    text-align:center;
+}
+
+/* Glass effect */
+.glass{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    margin:40px;
+}
+
+/* Cards */
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.card{
+    background:rgba(255,255,255,0.1);
+    padding:30px;
+    width:250px;
+    border-radius:20px;
+    transition:0.4s;
+    backdrop-filter:blur(10px);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:rgba(0,242,254,0.2);
+}
+
+/* Form */
+form{
+    display:flex;
+    flex-direction:column;
+    width:300px;
+    margin:auto;
+}
+
+input, textarea{
+    margin:10px 0;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.3);
+}
+
+/* Animation */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@media(max-width:768px){
+    nav{
+        padding:20px;
+    }
+}
